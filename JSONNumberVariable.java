@@ -6,12 +6,21 @@ public class JSONNumberVariable extends JSONVariable
 	{
 		super(name);
 		this.value = value;
-	}
+			}
 
 	@Override
 	void display() 
 	{
 		System.out.println("Number : " + this.name + " -> " + this.value);
+	}
+
+	@Override
+	String exportToJSON() 
+	{
+		String answer = ":";
+		answer += this.value;
+		answer += ",";
+		return answer;
 	}
 
 }

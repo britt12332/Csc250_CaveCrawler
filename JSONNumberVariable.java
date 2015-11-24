@@ -20,6 +20,7 @@ public class JSONNumberVariable extends JSONVariable
 		String answer = ":";
 		answer += this.value;
 		answer += ",";
+		answer += this.name + " -> " + answer;
 		return answer;
 	}
 

@@ -27,12 +27,13 @@ public class JSONArrayVariable extends JSONVariable
 
 	public String exportToJSON()
 	{
-		String answer = "{";
+		String answer = "[";
 		for(int i = 0; i < this.currSize; i++)
 		{
 			answer += this.value[i].exportToJSON();
 		}
-		answer += "}";
+		answer += "]";
+		answer += this.name + answer;	
 		return answer;
 	}
 }

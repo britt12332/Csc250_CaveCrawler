@@ -6,7 +6,13 @@ public class JSONNumberVariable extends JSONVariable
 	{
 		super(name);
 		this.value = value;
-			}
+	}
+
+	
+	public int getValue() {
+		return value;
+	}
+
 
 	@Override
 	void display() 
@@ -17,11 +23,7 @@ public class JSONNumberVariable extends JSONVariable
 	@Override
 	String exportToJSON() 
 	{
-		String answer = ":";
-		answer += this.value;
-		answer += ",";
-		answer += this.name + " -> " + answer;
-		return answer;
+		return "\"" + this.name + "\":" + this.value;
 	}
 
 }

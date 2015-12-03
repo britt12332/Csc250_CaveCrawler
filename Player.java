@@ -72,33 +72,18 @@ public class Player
 			savedData = CaveCore.theCave.toJSON().exportToJSON();
 			
 			File file = new File("C:\\Users\\brittany\\workspace1\\CaveCrawler\\bin\\caveJSON");
-			DataOutputStream outstream = null;
+			PrintStream outstream = null;
 			try 
 			{
-				outstream = new DataOutputStream(new FileOutputStream(file,false));
+				outstream = new PrintStream(new FileOutputStream(file,false));
 			} 
 			catch (FileNotFoundException e1)
 			{
 				e1.printStackTrace();
 			}
-			String body = savedData;
-			try 
-			{
-				outstream.write(body.getBytes());
-			}
-			catch (IOException e) 
-			{
-				e.printStackTrace();
-			}
-			try
-			{
+				outstream.append(savedData);
 				outstream.close();
-			}
-			catch (IOException e) 
-			{
-				e.printStackTrace();
-			}
-			
+					
 		}
 		else
 		{
